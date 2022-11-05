@@ -125,8 +125,11 @@ public RouteLocator myRoutes(RouteLocatorBuilder builder) {
     ).build();
 }
 ```
+
 - the circuit breaker wrapped route times out calls `/fallback` in the Gateway application.
 - Now we can add the `/fallback` endpoint to our application.
+
+
 ```java
 @RequestMapping("/fallback")
 public Mono<String> fallback() {
