@@ -245,3 +245,6 @@ public class ApplicationTest {
 - `@AutoConfigureWireMock(port = 0)` annotation starts WireMock on a random port for us.
 - setup “stubs” for the HTTPBin APIs we call through the Gateway and mock the behavior we expect.
 - use `WebTestClient` to make requests to the Gateway and validate the responses.
+
+# Reference
+- https://spring.io/guides/gs/gateway/

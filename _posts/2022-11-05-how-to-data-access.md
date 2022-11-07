@@ -117,3 +117,6 @@ public BasicDataSource secondDataSource() {
 	return secondDataSourceProperties().initializeDataSourceBuilder().type(BasicDataSource.class).build();
 }
 ```
+
+# Reference
+- https://docs.spring.io/spring-boot/docs/2.1.17.RELEASE/reference/html/howto-data-access.html
