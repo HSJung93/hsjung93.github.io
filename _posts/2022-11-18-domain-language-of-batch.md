@@ -4,6 +4,7 @@ date: 2022-11-18 20:00:00 +0900
 categories: [SlipBox, Spring]
 tags: [Batch, Domain]
 ---
+
 ![Figure 1. Batch Stereotypes](/assets/img/spring-batch-reference-model.png)
 
 - A Job has one to many steps
@@ -43,6 +44,7 @@ public Job footballJob() {
 # JobParameters
 - A `JobParameters` object holds a set of parameters used to start a batch job.
 
+
 ![Figure 2. Job Hierarchy](/assets/img/job-stereotypes-parameters.png)
 
 - The contract can be defined as: `JobInstance = Job + JobParameters`.
@@ -55,3 +57,51 @@ public Job footballJob() {
 - A `Job` defines what a job is and how it is to be executed.
 - A `JobInstance` is a purely organizational object to group executions together, primarily to enable correct restart semantics. 
 - A `JobExecution`, however, is the primary storage mechanism for what actually happened during a run and contains many more properties that must be controlled and persisted.
+
+# Step
+- A `Step` is a domain object that encapsulates an independent, sequential phase of a batch job. Therefore, every Job is composed entirely of one or more steps.
+- A simple `Step` might load data from a file into the database, requiring little or no code (depending upon the implementations used). A more complex `Step` may have complicated business rules that are applied as part of the processing. As with a `Job`, a `Step` has an individual `StepExecution` that correlates with a unique `JobExecution`.
+
+
+![Figure 3. Job Hierarchy With Steps](/assets/img/jobHeirarchyWithSteps.png)
+
+# StepExecution
+
+- `Step` executions are represented by objects of the `StepExecution` class. Each execution contains a reference to its corresponding step and `JobExecution` and transaction related data, such as commit and rollback counts and start and end times.
+- Additionally, each step execution contains an `ExecutionContext`, which contains any data a developer needs to have persisted across batch runs, such as statistics or state information needed to restart.
+
+# ExecutionContext
+
+- An `ExecutionContext` represents a collection of key/value pairs that are persisted and controlled by the framework in order to allow developers a place to store persistent state that is scoped to a `StepExecution` object or a `JobExecution` object.
+- The `ExecutionContext` can also be used for statistics that need to be persisted about the run itself.
+- Note that there is at least one `ExecutionContext` per `JobExecution` and one for every `StepExecution`.
+
+# JobRepository
+- It provides CRUD operations for JobLauncher, Job, and Step implementations. When a Job is first launched, a JobExecution is obtained from the repository, and, during the course of execution, StepExecution and JobExecution implementations are persisted by passing them to the repository.
+- When using Java configuration, the @EnableBatchProcessing annotation provides a JobRepository as one of the components automatically configured out of the box.
+
+# JobLauncher
+- `JobLauncher` represents a simple interface for launching a Job with a given set of JobParameters, as shown in the following example:
+
+
+```java
+public interface JobLauncher {
+
+public JobExecution run(Job job, JobParameters jobParameters)
+            throws JobExecutionAlreadyRunningException, JobRestartException,
+                   JobInstanceAlreadyCompleteException, JobParametersInvalidException;
+}
+```
+
+- It is expected that implementations obtain a valid JobExecution from the JobRepository and execute the Job.
+
+# Item Reader
+- `ItemReader` is an abstraction that represents the retrieval of input for a Step, one item at a time. 
+- When the `ItemReader` has exhausted the items it can provide, it indicates this by returning `null`.
+
+# Item Writer
+- `ItemWriter` is an abstraction that represents the output of a Step, one batch or chunk of items at a time.
+- While the `ItemReader` reads one item, and the `ItemWriter` writes them, the `ItemProcessor` provides an access point to transform or apply other business processing.
+
+# Reference
+- https://docs.spring.io/spring-batch/docs/current/reference/html/domain.html#domainLanguageOfBatch
