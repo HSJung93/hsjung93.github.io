@@ -4,7 +4,7 @@ date: 2022-11-18 20:00:00 +0900
 categories: [SlipBox, Spring]
 tags: [Batch, Domain]
 ---
-![Figure 1. Batch Stereotypes](/assets/img/spring-batch-reference-model.jpg)
+![Figure 1. Batch Stereotypes](/assets/img/spring-batch-reference-model.png)
 
 - A Job has one to many steps
 - Each of which has exactly one ItemReader, one ItemProcessor, and one ItemWriter. 
@@ -43,7 +43,7 @@ public Job footballJob() {
 # JobParameters
 - A `JobParameters` object holds a set of parameters used to start a batch job.
 
-![Figure 2. Job Hierarchy](/assets/img/job-stereotypes-parameters.jpg)
+![Figure 2. Job Hierarchy](/assets/img/job-stereotypes-parameters.png)
 
 - The contract can be defined as: `JobInstance = Job + JobParameters`.
 
@@ -51,3 +51,7 @@ public Job footballJob() {
 - A `JobExecution` refers to the technical concept of a single attempt to run a Job.
 > Using the EndOfDay Job described previously as an example, consider a JobInstance for 01-01-2017 that failed the first time it was run. If it is run again with the same identifying job parameters as the first run (01-01-2017), a new JobExecution is created. However, there is still only one JobInstance.
 {: .prompt-info }
+
+- A `Job` defines what a job is and how it is to be executed.
+- A `JobInstance` is a purely organizational object to group executions together, primarily to enable correct restart semantics. 
+- A `JobExecution`, however, is the primary storage mechanism for what actually happened during a run and contains many more properties that must be controlled and persisted.
