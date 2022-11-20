@@ -11,5 +11,8 @@ tags: [WebDAV, CollectionSynchronization]
 - The client can then present that same token back to the server at some later time, and the server will return only those items that are new, have changed, or were deleted since that token was generated.
 - The server also returns a new token representing the new state at the time the report was run.
 
+## 3.2 DAV: sync-collection Report
+- 
+
 # Reference
 - https://www.rfc-editor.org/rfc/rfc6578.html
