@@ -157,7 +157,7 @@ JsonDeserializer<DomainEvent> domainEventJsonDeserializer = new JsonDeserializer
 domainEventJsonDeserializer.addTrustedPackages("*");
 ```
 
-# Improve Execution Performance ofr Multiple Tests
+# Improve Execution Performance of Multiple Tests
 
 - with the annotation @TestInstance(TestInstance.Lifecycle.PER_CLASS). 
 - We can convert our @BeforeEach and @AfterEach to @BeforeAll and @AfterAll. - The only thing that we need to ensure is, that each test in the class is consuming all messages
