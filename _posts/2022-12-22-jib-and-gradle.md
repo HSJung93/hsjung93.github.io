@@ -1,5 +1,5 @@
 ---
-title: Jib and Gradle
+title: Jib with Gradle
 date: 2022-12-22 20:00:00 +0900
 categories: [SlipBox, Container]
 tags: [Gradle, Jib]
