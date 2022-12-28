@@ -1,5 +1,5 @@
 ---
-title: Spring Batch 2. Configuring and Running a Job
+title: [WIP] Spring Batch 2. Configuring and Running a Job
 date: 2022-12-06 20:00:00 +0900
 categories: [SlipBox, Spring]
 tags: [Batch, Job]
