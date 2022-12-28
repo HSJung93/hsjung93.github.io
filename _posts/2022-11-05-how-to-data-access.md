@@ -1,5 +1,5 @@
 ---
-title: How to Data Access
+title: How to Data Access with Spring Boot
 date: 2022-11-05 16:09:00 +0900
 categories: [SlipBox, Spring]
 tags: [Boot, DataSource]
