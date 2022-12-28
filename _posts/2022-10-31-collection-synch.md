@@ -1,5 +1,5 @@
 ---
-title: [WIP] Collection Synchronization for WebDAV
+title: WIP Collection Synchronization for WebDAV
 date: 2022-10-31 20:00:00 +0900
 categories: [SlipBox, Calendar]
 tags: [WebDAV, CollectionSynchronization]
