@@ -1,5 +1,5 @@
 ---
-title: The Domain Language of Batch
+title: Spring Batch 1. The Domain Language of Batch
 date: 2022-11-18 20:00:00 +0900
 categories: [SlipBox, Spring]
 tags: [Batch, Domain]
