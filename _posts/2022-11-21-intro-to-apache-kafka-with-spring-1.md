@@ -2,7 +2,7 @@
 title: Intro to Apache Kafka with Spring 1. Configuring Topics, Producing Messages 
 date: 2022-11-21 20:00:00 +0900
 categories: [SlipBox, Spring]
-tags: [Test, Kafka]
+tags: [Kafka, Publish]
 ---
 
 # 1. Overview
