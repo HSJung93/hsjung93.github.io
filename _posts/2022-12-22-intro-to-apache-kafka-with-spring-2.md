@@ -2,7 +2,7 @@
 title: Intro to Apache Kafka with Spring 2. Consuming Messages, Custom Message Converters, Multi-Method Listeners, 
 date: 2022-12-22 20:00:00 +0900
 categories: [SlipBox, Spring]
-tags: [Kafka, Consum]
+tags: [Kafka, Consume]
 ---
 
 # 4. Consuming Messages

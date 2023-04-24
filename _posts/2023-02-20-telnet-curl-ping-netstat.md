@@ -1,8 +1,8 @@
 ---
 title: 다른 서버의 방화벽이 열려있는지 확인하는 방법
 date: 2023-02-20 10:02:00 +0900
-categories: [SlipBox, Programming]
-tags: [Linux, Shell]
+categories: [메모상자, 리눅스]
+tags: [터미널, 명령어]
 ---
 
 한 서버에서 다른 서버의 방화벽이 열려 있는지 확인하기 위해서는 다른 서버의 IP 주소와 포트 주소 그리고 명령어가 필요하다. 다양한 방법이 있겠지만 주로 telnet, curl 명령어를 통하여 확인한다.
