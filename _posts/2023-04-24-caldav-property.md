@@ -1,7 +1,7 @@
 ---
 title: CalDAV 프로퍼티란
 date: 2023-04-24 20:00:00 +0900
-categories: [개발자, 시니어]
+categories: [강의, 시니어]
 tags: [CalDAV, 프로퍼티]
 ---
 
