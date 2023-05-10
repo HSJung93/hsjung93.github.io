@@ -9,7 +9,7 @@ tags: [Function, Length]
 - when should we enclose code in its own function?
 - based on length, such as functions should be no larger than fit on a screen
 - based on reuse - any code used more than once should be put in its own function, but code only used once should be left inline.
-- separation between intention and implementation.
+- **separation between intention and implementation**.
     - If you have to spend effort into looking at a fragment of code to figure out what it's doing, then you should extract it into a function and name the function after that “what”.
     - That way when you read it again, the purpose of the function leaps right out at you, and most of the time you won't need to care about how the function fulfills its purpose - which is the body of the function.
 - an example that Kent Beck showed me from the original Smalltalk system.
