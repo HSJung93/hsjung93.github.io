@@ -1,5 +1,5 @@
 ---
-title: ".pid" 파일이란?
+title: pid 파일이란?
 date: 2023-05-26 22:00:00 +0900
 categories: [메모상자, 네트워크]
 tags: [파일, pid]
