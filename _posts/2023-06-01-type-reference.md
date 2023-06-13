@@ -1,6 +1,6 @@
 ---
 title: "Why and When we have to use TypeReference"
-date: 2023-06-13 22:00:00 +0900
+date: 2023-06-01 22:00:00 +0900
 categories: [Level, Intern]
 tags: [Java, TypeReference]
 ---
