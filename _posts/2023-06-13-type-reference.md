@@ -4,6 +4,7 @@ date: 2023-06-13 22:00:00 +0900
 categories: [Level, Intern]
 tags: [Java, TypeReference]
 ---
+
 ## TypeReference
 
 In Java, `TypeReference` is often used in scenarios where generic type information needs to be captured at runtime. Since Java's type erasure removes generic type information at compile time, `TypeReference` provides a workaround to retain that information.
