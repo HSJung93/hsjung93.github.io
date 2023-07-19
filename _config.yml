@@ -8,7 +8,7 @@ theme: jekyll-theme-chirpy
 baseurl: ""
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
-# If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
+# If it has the same name as one of the files ibn folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
 lang: en
 
@@ -26,7 +26,7 @@ description: >-                        # used by seo meta and the atom feed
   Instead Of Running From The Pain Like A Sane Person Would Do, You Debug Into It.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ""
+url: "https://hsjung93.github.io"
 
 github:
   username: hsjung93             # change to your github username
