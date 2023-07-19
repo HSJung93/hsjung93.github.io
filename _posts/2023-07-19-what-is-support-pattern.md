@@ -1,6 +1,6 @@
 ---
 title: "Support Pattern"
-date: 2023-07-19 22:00:00 +0900
+date: 2023-07-19 19:00:00 +0900
 categories: [Level, Senior]
 tags: [Java, DesignPattern]
 ---
