@@ -1,5 +1,5 @@
 ---
-title: "Support Pattern"
+title: "Spring Data Persitable Domain"
 date: 2023-07-30 19:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Data]
