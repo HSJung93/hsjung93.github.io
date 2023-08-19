@@ -1,5 +1,5 @@
 ---
-title: "What is the most significant 64 bits and the most significant 64 bits of the UUID"
+title: "What is the most significant 64 bits and the least significant 64 bits of the UUID"
 date: 2023-08-03 19:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Data]

@@ -7,8 +7,10 @@ tags: [Spring, Data]
 
 The Persistable interface in Spring Framework's data.domain package is a simple interface for entities. It provides two methods:
 
-getId(): Returns the identifier of the entity.
-isNew(): Returns whether the entity is new or not.
+1. getId(): Returns the identifier of the entity.
+2. isNew(): Returns whether the entity is new or not.
+
+
 These methods are automatically made available as property accessors when the Persistable interface is implemented in combination with the @AccessType(PROPERTY) annotation. Either of these methods can be marked as transient when annotated with @Transient.
 
 The Persistable interface is used by Spring Data to detect the state of an entity. An entity is considered new if its identifier is null. Otherwise, the entity is considered to be persisted.
