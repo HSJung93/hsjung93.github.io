@@ -3,6 +3,7 @@ title: "What is Reentrant Lock"
 date: 2023-08-03 19:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Data]
+publish: false
 ---
 
 ReentrantLock is a class in the Java Concurrent package (java.util.concurrent.locks) and is an implementation of the Lock interface. It is a reentrant mutual exclusion lock, meaning a thread can acquire the same lock multiple times without causing a deadlock.

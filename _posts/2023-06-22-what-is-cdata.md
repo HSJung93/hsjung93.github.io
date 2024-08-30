@@ -3,6 +3,7 @@ title: "what is CDATA"
 date: 2023-06-22 22:00:00 +0900
 categories: [Level, Senior]
 tags: [xml, CDATA]
+publish: false
 ---
 
 CDATA stands for Character Data, and it is a section of an XML (eXtensible Markup Language) document where the content is treated as plain text rather than markup. In XML, markup is used to define the structure and formatting of the data, but there are situations where you need to include characters or data that would otherwise be interpreted as markup.

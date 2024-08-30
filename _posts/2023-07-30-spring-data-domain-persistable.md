@@ -3,6 +3,7 @@ title: "Spring Data Persitable Domain"
 date: 2023-07-30 19:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Data]
+publish: false
 ---
 
 The Persistable interface in Spring Framework's data.domain package is a simple interface for entities. It provides two methods:

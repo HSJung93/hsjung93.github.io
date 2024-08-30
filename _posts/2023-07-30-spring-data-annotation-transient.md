@@ -3,6 +3,7 @@ title: "Spring Data Transient Annotation"
 date: 2023-07-30 19:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Data]
+publish: false
 ---
 
 In the Spring Framework's data access module, the `@Transient` annotation is used to mark a field or property of an entity class as non-persistent. This means that the field will not be mapped to any database column when using an ORM (Object-Relational Mapping) framework like Spring Data JPA. It's useful when you have certain fields in your entity class that you want to exclude from database storage or data persistence.

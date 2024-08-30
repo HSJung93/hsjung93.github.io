@@ -3,6 +3,7 @@ title: "Support Pattern"
 date: 2023-07-19 19:00:00 +0900
 categories: [Level, Senior]
 tags: [Java, DesignPattern]
+publish: false
 ---
 
 The Support design pattern, also known as the Chain of Responsibility pattern, is a behavioral design pattern that allows an object to pass a request along a chain of potential handlers until one of them handles the request. The main idea is to decouple the sender of a request from its receivers and give multiple objects a chance to handle the request.

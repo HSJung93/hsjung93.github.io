@@ -3,6 +3,7 @@ title: "OpenID Connect(OICD)"
 date: 2023-07-06 22:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Security]
+publish: false
 ---
 
 OpenID Connect (OIDC) is an identity layer built on top of the OAuth 2.0 protocol. It provides a standardized way for clients (such as web applications or mobile apps) to authenticate users and obtain their identity information from an OpenID Connect Provider (OP). OIDC enables single sign-on (SSO) and allows users to authenticate using their existing accounts with identity providers such as Google, Facebook, or Microsoft.

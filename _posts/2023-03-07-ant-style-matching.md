@@ -3,6 +3,7 @@ title: Ant Style Pattern Matching
 date: 2023-03-07 10:02:00 +0900
 categories: [SlipBox, Spring]
 tags: [PatternMatching, AntStyle]
+publish: false
 ---
 
 Ant-style matching is a pattern matching technique used in software development to match strings based on certain patterns. It gets its name from the use of wildcard characters that resemble the behavior of ants crawling along a path.

@@ -3,6 +3,7 @@ title: "Key Differences between constructor and init block in Kotlin"
 date: 2023-08-03 19:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Data]
+publish: false
 ---
 
 In Kotlin, both the constructor and init block are used for initializing the object of a class. However, there are key differences between them.

@@ -3,6 +3,7 @@ title: "crossline modifier"
 date: 2023-06-13 22:00:00 +0900
 categories: [Level, Junior]
 tags: [Kotlin, crossline]
+publish: false
 ---
 
 In Kotlin, the crossinline modifier is used in function or lambda expressions to specify that the function or lambda should not allow non-local returns. This means that the function or lambda cannot use the return keyword to exit the enclosing function or lambda expression.

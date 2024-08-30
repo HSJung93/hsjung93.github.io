@@ -3,6 +3,7 @@ title: "What is Claim in JWT?"
 date: 2023-06-26 22:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Security]
+publish: false
 ---
 
 In the context of JSON Web Tokens (JWT), a claim refers to a piece of information included in the token payload. The payload contains statements about the entity (typically a user) and additional data related to the token.

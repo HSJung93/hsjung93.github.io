@@ -3,6 +3,7 @@ title: Intro to Apache Kafka with Spring 2. Consuming Messages, Custom Message C
 date: 2022-12-22 20:00:00 +0900
 categories: [SlipBox, Spring]
 tags: [Kafka, Consume]
+publish: false
 ---
 
 # 4. Consuming Messages

@@ -3,6 +3,7 @@ title: "CDATA 란 무엇인가?"
 date: 2023-06-22 22:00:00 +0900
 categories: [강의, 시니어]
 tags: [xml, CDATA]
+publish: false
 ---
 
 - XML(eXtensible Markup Language)의 한 섹션이다.

@@ -3,6 +3,7 @@ title: "What is the Difference Between Service Name and Host Name"
 date: 2023-07-10 22:00:00 +0900
 categories: [Level, Junior]
 tags: [Network]
+publish: false
 ---
 
 In the context of computer networking, a service name and a host name refer to different concepts:

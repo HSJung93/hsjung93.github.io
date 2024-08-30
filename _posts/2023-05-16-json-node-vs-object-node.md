@@ -3,6 +3,7 @@ title: JsonNode vs ObjectNode
 date: 2023-05-16 22:00:00 +0900
 categories: [메모상자, 자바]
 tags: [라이브러리, 잭슨]
+publish: false
 ---
 
 Jackson 라이브러리는 자바에서 JSON 데이터를 다룰 때에 주로 사용되는 라이브러리이다. JsonNode와 ObjectNode 모두 이 Jackson 라이브러리가 제공하는 클래스이다. 그러나 JsonNode는 어떤 JSON 노드도 표현하는 제너릭 클래스이고, ObjectNode는 JSON 객체들 중 하나를 특정하는 클래스이고 객체 프로퍼티를 조작하는 메서드들을 포함한다. 

@@ -3,6 +3,7 @@ title: Testing an Apache Kafka Integration
 date: 2022-11-10 20:00:00 +0900
 categories: [SlipBox, Spring]
 tags: [Test, Kafka]
+publish: false
 ---
 # Project Setup
 - When you select Spring for Apache Kafka at `start.spring.io` it automatically adds all necessary dependency entries into the maven or gradle file. 

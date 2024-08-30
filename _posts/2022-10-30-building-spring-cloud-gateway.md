@@ -3,6 +3,7 @@ title: Building a Spring Cloud Gateway
 date: 2022-10-30 05:09:00 +0900
 categories: [SlipBox, Spring]
 tags: [Cloud, Gateway]
+publish: false
 ---
 # Creating A Simple Route
 - The Spring Cloud Gateway uses routes to process requests to downstream services

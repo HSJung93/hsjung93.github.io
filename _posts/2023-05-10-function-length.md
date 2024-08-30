@@ -3,6 +3,7 @@ title: Function Length
 date: 2023-05-10 20:00:01 +0900
 categories: [SlipBox, Code]
 tags: [Function, Length]
+publish: false
 ---
 
 - how long a function should be.

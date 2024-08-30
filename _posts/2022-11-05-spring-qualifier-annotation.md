@@ -3,6 +3,7 @@ title: The Spring Qualifier Annotation
 date: 2022-11-05 16:58:00 +0900
 categories: [SlipBox, Spring]
 tags: [Annotation, Qualifier]
+publish: false
 ---
 
 # AutoWire Need for Disambiguation

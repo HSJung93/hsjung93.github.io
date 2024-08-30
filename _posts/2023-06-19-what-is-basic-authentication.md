@@ -3,6 +3,7 @@ title: "What is BASIC Authentication"
 date: 2023-06-19 22:00:00 +0900
 categories: [Level, Intern]
 tags: [Spring, Security]
+publish: false
 ---
 
 BASIC authentication is a simple and widely used authentication mechanism used in web applications and APIs. It is an HTTP-based authentication scheme where the client sends its credentials (username and password) to the server in plaintext. The server then validates these credentials to determine if the client is authorized to access the requested resource.

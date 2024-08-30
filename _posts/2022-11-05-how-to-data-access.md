@@ -3,6 +3,7 @@ title: How to Data Access with Spring Boot
 date: 2022-11-05 16:09:00 +0900
 categories: [SlipBox, Spring]
 tags: [Boot, DataSource]
+publish: false
 ---
 # Data Access
 ## 1. Configure a Custom DataSource

@@ -3,6 +3,7 @@ title: "What is EventListener in Spring"
 date: 2023-06-26 22:00:00 +0900
 categories: [Level, Junior]
 tags: [Spring, Context]
+publish: false
 ---
 
 In Spring Framework, the @EventListener annotation is used to handle and respond to events that occur within an application. It allows you to define methods that will be executed when specific events are published in the Spring application context. These events can be either standard events provided by Spring or custom events that you create.
