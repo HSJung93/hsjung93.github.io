@@ -8,7 +8,7 @@ tags: [Grafana]
 
 프로그래밍의 세계에서는 셀 수 없는 정보들이 흐르고 있다. 이 정보의 흐름(Data Stream)이 가공을 거치지 않을 경우 너무나 기계 친화적이고 장황하여 인간이 활용하기 어렵다. 마치 잔에 담긴 음료처럼 정보의 흐름을 정해진 형태로 나누어 바라볼 수 있다면, 인간은 정보의 흐름을 가늠하고 조절하여 새로운 통찰을 얻을 수 있다. Grafana Labs에서 제공하는 Grafana는 서버의 상태와 관련된 정보의 흐름을 분할하여 축적하고 시각화하는 프로그래밍 세계의 잔이다.
 
-![](/assets/img/grafana-log-200x100.png)
+![](/assets/img/grafana-logo-200x100.png)
 
 > https://grafana.com
 {: .prompt-tip }
