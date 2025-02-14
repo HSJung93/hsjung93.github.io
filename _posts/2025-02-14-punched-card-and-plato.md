@@ -26,3 +26,4 @@ tags: [Punched Card, Data Storage]
 
 ### Reference
 - https://ko.wikipedia.org/wiki/%EC%B2%9C%EA%B3%B5_%EC%B9%B4%EB%93%9C
+- https://ko.wikipedia.org/wiki/%EA%B5%AD%EA%B0%80_(%ED%94%8C%EB%9D%BC%ED%86%A4)
