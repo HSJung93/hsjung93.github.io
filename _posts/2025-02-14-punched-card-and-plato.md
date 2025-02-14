@@ -1,8 +1,11 @@
 ---
 title: 천공 카드와 플라톤
+description: 천공 카드는 데이터를 표현하기 위해 규칙에 따라 직사각형의 모양의 구멍을 뚫어 사용하는 종이 카드로서 초기의 저장매체이다.
 date: 2025-02-14 08:00:00 +0900
 categories: [에세이, 글 쓰는 개발자]
 tags: [Punched Card, Data Storage]
+image:
+  path: /assets/img/punch-card.png
 ---
 ![](/assets/img/punch-card.png)
 > 천공 카드는 데이터를 표현하기 위해 규칙에 따라 직사각형의 모양의 구멍을 뚫어 사용하는 종이 카드로서 초기의 저장매체이다.
