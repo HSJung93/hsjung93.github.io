@@ -1,5 +1,5 @@
 ---
-title: 천공 카드와 플라톤
+title: 플라톤과 메모리
 date: 2025-02-14 08:00:00 +0900
 categories: [에세이, 글 쓰는 개발자]
 tags: [Punched Card, Data Storage]
