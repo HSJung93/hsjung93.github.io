@@ -14,9 +14,9 @@ timezone: Asia/Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Hoesung Jung's                          # the main title
+title: Hoesung Jung's Github Pages                         # the main title
 
-tagline: Github Pages # it will display as the sub-title
+tagline: Cultivate the composure that overcomes haste, and urge upon yourself the vigilance that overcomes negligence. # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Instead Of Running From The Pain Like A Sane Person Would Do, You Debug Into It.
