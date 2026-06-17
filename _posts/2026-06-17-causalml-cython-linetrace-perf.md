@@ -1,11 +1,11 @@
 ---
-title: "좀비 GIL 추적기: 배포 wheel의 Cython 프로파일링 훅이 병렬로 돌아가던 통계모델을 느리게 한 사연"
+title: "컴파일 과정에서 살아난 좀비 GIL 추적기: 배포 wheel의 Cython 프로파일링 훅이 병렬로 돌아가던 통계모델을 느리게 한 사연"
 date: 2026-06-17 08:00:00 +0900
 categories: [개발, 성능]
 tags: [Cython, GIL, 성능, 오픈소스, 인과추론, causalml]
 ---
 
-마케팅 성과를 측정하기 위한 업리프트 모델링 작업 중이었다. Uber [causalml](https://github.com/uber/causalml)(0.16.0) 패키지의 `CausalRandomForestRegressor` 함수에서 성능 이상을 발견했다. 학습을 병렬화하려고 `n_jobs`를 올렸더니 오히려 느려졌고, `n_jobs=4`가 기본값보다 약 6배 느렸다. 원인은 트리 학습 Cython 소스에 하드코딩된 `linetrace` 디렉티브가 배포 wheel에까지 프로파일링 훅을 컴파일해 넣은 것이었다. 이 글은 증상부터 원인 분석, 검증, 수정까지의 과정을 정리한다. PR은 업스트림에 머지되었다.
+업리프트 모델로 마케팅 성과를 측정하기 위하여 통계 패키지들을 찾아서 돌려보고 있었다. Uber[causalml](https://github.com/uber/causalml)(0.16.0) 패키지의 `CausalRandomForestRegressor` 함수로 모델을 학습하던 중 이상한 점을 발견했다. 느린 속도에 모델 학습을 병렬화하기 위하여 `n_jobs` 파라미터의 값을 올렸더니 오히려 느려졌던 것이다(`n_jobs=4`가 기본값보다 약 6배 느렸다). 결과적으로 병렬 작업이 느려졌던 원인은, Cython 소스 코드에 하드코딩된 `linetrace` 디렉티브가 배포 wheel에까지 프로파일링 훅을 컴파일해 넣었기 때문이었다. 이 글에서는 내가 발견한 증상에서부터 원인 분석, 그리고 검증 및 수정에 이르기까지의 과정을 정리해 보았다. 참고로 PR은 이미 upstream에 머지되었다.
 
 - Pull request: [uber/causalml#914](https://github.com/uber/causalml/pull/914)
 - Issue: [uber/causalml#913](https://github.com/uber/causalml/issues/913)
@@ -22,7 +22,7 @@ tags: [Cython, GIL, 성능, 오픈소스, 인과추론, causalml]
 
 _PyPI wheel 0.16.0, 50 trees, 12k rows 기준._
 
-학습에 걸리는 시간만 늘어날 뿐 별다른 에러도 경고도 없었다. 아마 서로 다른 병렬 코어로 비교해보지 않으면, 이상한 점을 찾아내기 어려워 버그가 남아있었던 것 같다. 
+학습에 걸리는 시간만 늘어날 뿐 별다른 에러도 경고도 없었다. 이상한 점을 찾아내기 어려워 버그가 남아있기 좋은 환경이었다.
 
 ## 원인 분석
 
