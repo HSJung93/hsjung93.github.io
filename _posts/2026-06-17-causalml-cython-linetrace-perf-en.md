@@ -5,7 +5,7 @@ categories: [개발, 성능]
 tags: [Cython, GIL, Performance, Open Source, Causal Inference, causalml]
 ---
 
-While doing uplift modeling to measure marketing performance, I ran into a performance problem in Uber's [causalml](https://github.com/uber/causalml) (0.16.0): `CausalRandomForestRegressor` got *slower* when I raised `n_jobs` to parallelize the fit. `n_jobs=4` was about 6x slower than the default. The cause was a `linetrace` directive hardcoded into the tree-building Cython sources, which compiled profiling hooks all the way into the released wheel. This post walks through the symptom, the root cause, the verification, and the fix. The PR has been merged upstream.
+I was trying out a few statistics packages to do uplift modeling for measuring marketing performance. One of them was Uber's [causalml](https://github.com/uber/causalml) (0.16.0), and while fitting a model with its `CausalRandomForestRegressor` I noticed something off. The fit was slow, so I raised `n_jobs` to parallelize it, and it got *slower* instead. Setting `n_jobs=4` to train with four workers was about 6x slower than the default (`n_jobs=1`). The cause turned out to be a `linetrace` directive hardcoded into the tree-building Cython sources, which compiled profiling hooks all the way into the released wheel. This post walks through how I traced that cause back from the symptom, and how I verified and fixed it. For what it's worth, the issue I filed and the fix are now part of causalml's source.
 
 - Pull request: [uber/causalml#914](https://github.com/uber/causalml/pull/914)
 - Issue: [uber/causalml#913](https://github.com/uber/causalml/issues/913)
@@ -79,3 +79,5 @@ I then removed `# cython: linetrace=True` from the five `.pyx` files and their `
 What made this bug tricky is that it disguises itself, with no error or warning, as "the model is just heavy." The clue was the counterintuitive result: raising `n_jobs` made the fit take longer, not shorter. I went in to use a statistics library and ended up down in the generated C code and the build configuration. It was a fun excuse to actually dig into the Python GIL and wheel compilation/builds, things I'd only heard about until now.
 
 Whether a model gives the right answer matters, and so does whether it gives that answer in time. A slow tool doesn't get used enough, and a tool that isn't used enough doesn't get verified enough either.
+
+Back in grad school, running models for statistics work, it never crossed my mind to read the code to make it faster. The debugging instinct came from five years as a backend engineer. I've since switched teams and I'm now on a causal inference project to measure marketing performance. It's been a while since I last ran statistical models, and that's part of what made this a welcome bug: somewhere in between, I could feel that I'd grown a bit broader and a bit deeper.
