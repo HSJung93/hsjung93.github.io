@@ -2,7 +2,7 @@
 title: "Hunting the zombie GIL: how Cython profiling hooks in the release wheel slowed causalml's parallel Causal Forest"
 date: 2026-06-17 08:00:00 +0900
 categories: [개발, 성능]
-tags: [Cython, GIL, Performance, Open Source, Causal Inference, causalml]
+tags: [Cython, GIL, Performance, Open Source, Causal Inference, causalml, Uplift Experiments]
 ---
 
 I was trying out a few statistics packages to do uplift modeling for measuring marketing performance. One of them was Uber's [causalml](https://github.com/uber/causalml) (0.16.0), and while fitting a model with its `CausalRandomForestRegressor` I noticed something off. The fit was slow, so I raised `n_jobs` to parallelize it, and it got *slower* instead. Setting `n_jobs=4` to train with four workers was about 6x slower than the default (`n_jobs=1`). The cause turned out to be a `linetrace` directive hardcoded into the tree-building Cython sources, which compiled profiling hooks all the way into the released wheel. This post walks through how I traced that cause back from the symptom, and how I verified and fixed it. For what it's worth, the issue I filed and the fix are now part of causalml's source.
